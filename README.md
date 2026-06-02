@@ -1,21 +1,27 @@
+<img src="https://capsule-render.vercel.app/api?type=rect&color=000000&height=180&text=BULWARK&fontSize=86&fontColor=ffffff&fontAlignY=58&desc=Silent.%20Patient.%20Inevitable.&descAlignY=80&descSize=20&descColor=888888" width="100%">
+
 <div align="center">
 
-<br />
+<br>
 
-# BULWARK
+<!-- Replace with monolith wordmark SVG once exported from Claude Code -->
+<!-- <img src=".github/assets/wordmark-white.svg#gh-dark-mode-only" height="36" alt="BULWARK"> -->
+<!-- <img src=".github/assets/wordmark-black.svg#gh-light-mode-only" height="36" alt="BULWARK"> -->
 
-**Autonomous external pentest agent.**
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=3500&pause=1200&color=555555&center=true&vCenter=true&width=700&lines=Autonomous+external+pentest+agent.;One+agent.+Hardened+sandbox.+Full+audit+trail.;Point+it+at+scope.+Walk+away.+Come+back+to+proof.;One+agent%2C+not+seventeen." alt="" />
 
-*Silent. Patient. Inevitable.*
+<br><br>
 
-<br />
+[![](https://img.shields.io/badge/license-BSL_1.1-111111?style=flat-square&labelColor=000000)](LICENSE)
+[![](https://img.shields.io/badge/tests-1700%2B_passing-111111?style=flat-square&labelColor=000000)]()
+[![](https://img.shields.io/badge/platform-Linux_%C2%B7_macOS-111111?style=flat-square&labelColor=000000)]()
+[![](https://img.shields.io/badge/LLM-Claude_%C2%B7_OpenAI_compat-111111?style=flat-square&labelColor=000000)]()
 
-[![License: BSL](https://img.shields.io/badge/License-BSL_1.1-000000.svg?style=flat-square&logoColor=white)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Private%20Beta-000000.svg?style=flat-square)](https://getwark.com)
-[![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux-000000.svg?style=flat-square)](https://getwark.com)
-[![LLM](https://img.shields.io/badge/LLM-Claude%20%7C%20OpenAI-000000.svg?style=flat-square)](https://getwark.com)
-[![Tests](https://img.shields.io/badge/Tests-1700%2B%20passing-000000.svg?style=flat-square)](https://getwark.com)
-[![Audited](https://img.shields.io/badge/Security-Audited-000000.svg?style=flat-square)](https://getwark.com)
+<br>
+
+[![](https://img.shields.io/badge/Request_Access_%E2%86%92-getwark.com-ffffff?style=flat-square&labelColor=000000&color=000000)](https://getwark.com)
+
+<br><br>
 
 </div>
 
@@ -23,107 +29,244 @@
 
 <div align="center">
 
-```
-Point it at an authorized target.
-Walk away.
-Come back to proof.
-```
+<!-- Terminal demo — replace this comment when ready -->
+<!-- <img src=".github/assets/demo.gif" width="860" alt="BULWARK in action"> -->
+<!-- Recommended: asciinema SVG or GIF · 860px wide · dark terminal background -->
 
 </div>
 
 ---
 
-## What it does
+<br>
 
-BULWARK is a local desktop app. You give it a scope, a budget, and an authorization PDF. It spins up a hardened sandbox, verifies your exit IP, and runs a single autonomous agent loop:
+<table>
+<tr>
+<td width="25%" align="center" valign="top">
+<br>
 
-```
-recon → enumerate → find vulnerabilities → confirm exploits → report
-```
+**One agent**  
+not seventeen
 
-No cloud. No frameworks. No babysitting.
+A single hand-written ReAct loop. No framework, no orchestrator. You can read it and reason about it.
 
----
+<br>
+</td>
+<td width="25%" align="center" valign="top">
+<br>
 
-## Proven
+**Stealth-first**  
+not loud
 
-| Run | Result | Steps | Cost | Scope violations |
-|-----|--------|-------|------|-----------------|
-| HTB Easy | `user.txt` + `root.txt` | 88 | **$0.93** | 0 |
-| HTB Medium | JWT `alg=none` → SSH CA abuse → root | — | — | 0 |
+Quiet and patient by default. The client finds out if their detection actually works.
 
-> In one run, the agent marked an unconfirmed command injection as `not_exploitable`  
-> instead of fake-confirming it — then found a real path on its own.
+<br>
+</td>
+<td width="25%" align="center" valign="top">
+<br>
 
----
+**Safety is**  
+the product
 
-## Architecture
+Six independent guardrails built for a rogue LLM. The operator is liable — the constraints are the core.
 
-```
-One ReAct loop           — not a LangGraph zoo
-Markdown vault           — not a graph database  
-Hardened Kali sandbox    — not a mounted Docker socket
-Deterministic cascades   — not LLM calls for every exploit variation
-Stealth-first            — not fast and loud
-Audit-logged             — not a black box
-```
+<br>
+</td>
+<td width="25%" align="center" valign="top">
+<br>
 
----
+**Proof**  
+not theatrics
 
-## Safety model
+Honest dead-ends documented. Findings confirmed before marked exploitable. Audit log for everything.
 
-BULWARK treats the LLM as part of the threat model. Six layered guardrails ensure a misbehaving or jailbroken model **cannot** leave scope, leak your IP, or exceed your budget:
+<br>
+</td>
+</tr>
+</table>
 
-```
-1. SCOPE GUARD        — every command verified before execution
-2. EGRESS FILTER      — network drops everything except in-scope IPs
-3. HARDENED CONTAINER — read-only, non-root, disposable, no Docker socket
-4. AUDIT LOG          — hash-chained, tamper-evident, optionally encrypted
-5. BUDGET GUARD       — hard cap checked before every LLM call
-6. IP GUARD           — engagement freezes if exit IP drifts mid-session
-```
+<br>
 
-**1,700+ automated tests passing. Independently code-audited.**
+BULWARK is a local desktop app. Point it at an authorized scope — a domain or IP range — and walk away. It spins up a hardened Kali sandbox, verifies your exit IP, and runs a single autonomous agent loop across the full external surface: recon → enumeration → vulnerability discovery → exploit confirmation → structured report.
 
----
-
-## Status
-
-BULWARK is currently in **private beta**.
-
-The core agent is being prepared for public release under BSL 1.1.  
-Offensive plugin packs (playbooks, exploit cascades, CVE catalog) will be available separately.
-
-**Early access → [getwark.com](https://getwark.com)**
+No babysitting. No out-of-scope packets. No leaked IPs. No runaway LLM cost.
 
 ---
 
-## What's coming
+<br>
 
-- [ ] Public core release (BSL 1.1)
-- [ ] RECON pack — external surface mapping
-- [ ] BREACH pack — confirmed exploit chains  
-- [ ] FULL SPECTRUM pack — complete external engagement coverage
-- [ ] Documentation
+## Why it's different
 
----
+The AI pentest agent space is full of LangGraph zoos, Docker socket mounts, and self-published benchmarks. BULWARK is the opposite of all of it.
 
-## Legal
-
-BULWARK is built for **authorized penetration testing only**.  
-Every engagement requires an authorization PDF. Scope guard is not optional.  
-Use responsibly. Know your laws.
-
----
+<br>
 
 <div align="center">
 
-**[getwark.com](https://getwark.com)** · `hello@getwark.com`
+| | The field | BULWARK |
+|:---:|:---|:---|
+| | 17 specialized agents in a framework | **One** ReAct loop — hand-written, no framework |
+| | Docker socket mounted inside the container | Host-only Docker — nothing to escape with |
+| | Neo4j / vector DB / RAG for memory | **Markdown vault** — open any file in a text editor |
+| | LLM call per attack variation | Deterministic in-code cascades — no extra token cost |
+| | "Fast and loud, you're authorized" | **Stealth-first** by default, egress-verified |
+| | Self-published, flattering benchmarks | Audit-logged runs you could reproduce yourself |
 
-*Incorporated in Switzerland*
+</div>
 
-<br />
+<br>
 
-<sub>© 2025 BULWARK — For authorized testing only.</sub>
+> One agent, not seventeen. One tool, not an orchestrator. Markdown, not graph databases. Stealth, not theater.
 
+---
+
+<br>
+
+## Proof
+
+Real runs. Audit-logged. Reproducible.
+
+<br>
+
+> [!IMPORTANT]
+> **HackTheBox — easy box, fully autonomous**  
+> Both `user.txt` + `root.txt` retrieved with zero operator input.  
+> **88 steps · $0.93 LLM cost · fresh box · full audit log.**
+
+<br>
+
+> [!IMPORTANT]
+> **HackTheBox — medium box, autonomous exploit chain**  
+> JWT `alg=none` → SSH certificate-authority abuse → root.  
+> No hand-holding. Full chain documented.
+
+<br>
+
+> [!NOTE]
+> In one run, the agent marked a command-injection finding as `not_exploitable` instead of fake-confirming it, then found a real path on its own. **It doesn't lie to look good.** That's the point.
+
+<br>
+
+- 1,700+ automated tests passing — strict type-checking and linting clean
+- Independently, adversarially code-audited — safety-critical guards verified
+- Hand-written loop you can read, not an opaque orchestration
+
+---
+
+<br>
+
+## Safety — six layers
+
+BULWARK treats the LLM as part of the threat model. It assumes the AI might jailbreak, hallucinate, or go rogue — and is engineered so that even then, it cannot cause harm.
+
+<br>
+
+<table>
+<tr>
+<td width="4%" align="center"><b>1</b></td>
+<td width="22%"><b>Scope guard</b></td>
+<td>Every command parsed and checked against authorized targets before execution. Cannot be tricked into touching an out-of-scope address.</td>
+</tr>
+<tr>
+<td align="center"><b>2</b></td>
+<td><b>Egress filter</b></td>
+<td>Network drops everything by default. Only resolved in-scope IPs and the LLM provider are allowed through.</td>
+</tr>
+<tr>
+<td align="center"><b>3</b></td>
+<td><b>Hardened sandbox</b></td>
+<td>Read-only filesystem. Non-root. No Docker socket exposed. Thrown away after the run. Nothing to escape with.</td>
+</tr>
+<tr>
+<td align="center"><b>4</b></td>
+<td><b>Hash-chained audit log</b></td>
+<td>Every action — tool call, exploit step, guard decision — recorded in a tamper-evident, optionally encrypted log. Fully reproducible.</td>
+</tr>
+<tr>
+<td align="center"><b>5</b></td>
+<td><b>Budget guard</b></td>
+<td>Hard cost cap checked before every LLM call. The agent cannot exceed the budget you set.</td>
+</tr>
+<tr>
+<td align="center"><b>6</b></td>
+<td><b>IP guard</b></td>
+<td>Verifies your anonymizing exit IP on host and inside the container. Freezes the engagement if it drifts. Your real IP cannot leak.</td>
+</tr>
+</table>
+
+<br>
+
+> The guardrails are not a checkbox. They are the core engineering. For operators contractually responsible for what the tool does — that's the reason to use it.
+
+---
+
+<br>
+
+## How it works
+
+```
+┌─────────────────────────────────────────────────────┐
+│                      OPERATOR                       │
+│         scope · LLM key · budget · auth PDF         │
+└────────────────────────┬────────────────────────────┘
+                         │  exit IP verified
+         ┌───────────────▼────────────────┐
+         │          AGENT LOOP            │
+         │                                │
+         │  recon → enumerate → vulns     │
+         │       → exploit cascades       │
+         │                                │
+         │  scope guard  ·  budget guard  │
+         └───────────────┬────────────────┘
+                         │
+         ┌───────────────▼────────────────┐
+         │        MARKDOWN VAULT          │
+         │  findings · steps · evidence   │
+         │  readable in any text editor   │
+         └───────────────┬────────────────┘
+                         │
+         ┌───────────────▼────────────────┐
+         │    HARDENED KALI SANDBOX       │
+         │  read-only · non-root          │
+         │  no docker socket exposed      │
+         │  network: in-scope IPs only    │
+         └────────────────────────────────┘
+```
+
+<br>
+
+- ~40 LLM-facing tools — 27 static + ~15 deterministic exploit cascades (no extra token cost)
+- 6+ OWASP playbooks · CWE library · CVE catalog
+- Supports: **Anthropic Claude** (primary) · OpenAI-compatible (DeepSeek, Kimi, GLM)
+- Ships as Tauri desktop app + single-binary CLI — `bulwark`
+
+---
+
+<br>
+
+## Plugins
+
+The core agent loop is open source under BSL. The offensive capability — playbooks, exploit cascades, CVE catalog — is distributed as plugins via [getwark.com](https://getwark.com).
+
+Available as one-time packs for solo operators, or monthly subscriptions with updated attack content for teams and consultancies.
+
+<div align="center">
+<br>
+
+[![](https://img.shields.io/badge/See_available_packs_%E2%86%92-getwark.com-000000?style=flat-square&labelColor=000000)](https://getwark.com)
+
+<br>
+</div>
+
+---
+
+<br>
+
+## License
+
+Released under [Business Source License 1.1](LICENSE) — free to use, inspect, and build on. Commercial redistribution requires a separate agreement. Offensive plugins distributed under commercial license via [getwark.com](https://getwark.com).
+
+<br>
+
+<div align="center">
+<sub>For authorized testing only. The authorization PDF requirement is a feature, not fine print.</sub>
 </div>
