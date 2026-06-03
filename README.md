@@ -1,14 +1,10 @@
-<img src="https://capsule-render.vercel.app/api?type=rect&color=000000&height=180&text=BULWARK&fontSize=86&fontColor=ffffff&fontAlignY=58&desc=Silent.%20Patient.%20Inevitable.&descAlignY=80&descSize=20&descColor=888888" width="100%">
+<img src="assets/og.png" alt="BULWARK — Silent. Patient. Inevitable." width="100%">
 
 <div align="center">
 
 <br>
 
-<!-- Replace with monolith wordmark SVG once exported from Claude Code -->
-<!-- <img src=".github/assets/wordmark-white.svg#gh-dark-mode-only" height="36" alt="BULWARK"> -->
-<!-- <img src=".github/assets/wordmark-black.svg#gh-light-mode-only" height="36" alt="BULWARK"> -->
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=3500&pause=1200&color=555555&center=true&vCenter=true&width=700&lines=Autonomous+external+pentest+agent.;One+agent.+Hardened+sandbox.+Full+audit+trail.;Point+it+at+scope.+Walk+away.+Come+back+to+proof.;One+agent%2C+not+seventeen." alt="" />
+<sub>Autonomous external pentest agent · one agent, not seventeen · hardened sandbox · full audit trail</sub>
 
 <br><br>
 
@@ -23,15 +19,7 @@
 
 <br><br>
 
-</div>
-
----
-
-<div align="center">
-
-<!-- Terminal demo — replace this comment when ready -->
-<!-- <img src=".github/assets/demo.gif" width="860" alt="BULWARK in action"> -->
-<!-- Recommended: asciinema SVG or GIF · 860px wide · dark terminal background -->
+<img src="assets/live-run.webp" width="860" alt="BULWARK live run — agent timeline, confirmed findings, CVSS scores">
 
 </div>
 
@@ -146,6 +134,12 @@ Real runs. Audit-logged. Reproducible.
 
 <br>
 
+<div align="center">
+<img src="assets/attack-graph.webp" width="820" alt="BULWARK attack graph — hosts, services, and confirmed paths to root">
+</div>
+
+<br>
+
 - 1,700+ automated tests passing — strict type-checking and linting clean
 - Independently, adversarially code-audited — safety-critical guards verified
 - Hand-written loop you can read, not an opaque orchestration
@@ -245,7 +239,31 @@ BULWARK treats the LLM as part of the threat model. It assumes the AI might jail
 
 ## Plugins
 
-The core agent loop is open source under BSL. The offensive capability — playbooks, exploit cascades, CVE catalog — is distributed as plugins via [getwark.com](https://getwark.com).
+The core agent loop is open source under BSL. The offensive capability — playbooks, exploit cascades, CVE catalog — ships as plugins via [getwark.com](https://getwark.com), grouped by engagement surface:
+
+<br>
+
+<table>
+<tr>
+<td width="33%" align="center" valign="top">
+<img src="assets/frontier.webp" width="100%" alt="FRONTIER">
+<br><br><b>FRONTIER</b><br><sub>Web &amp; application layer</sub>
+<br><br><sub>OWASP Top 10 · SSRF → IMDS · SSTI → RCE · XXE · SPA via headless browser</sub>
+</td>
+<td width="33%" align="center" valign="top">
+<img src="assets/conduit.webp" width="100%" alt="CONDUIT">
+<br><br><b>CONDUIT</b><br><sub>API &amp; service layer</sub>
+<br><br><sub>REST · GraphQL · JWT alg=none · OAuth/OIDC · SAML · param mining</sub>
+</td>
+<td width="33%" align="center" valign="top">
+<img src="assets/dominion.webp" width="100%" alt="DOMINION">
+<br><br><b>DOMINION</b><br><sub>Active Directory &amp; internal</sub>
+<br><br><sub>Anonymous enum · ESC8 relay · Kerberoast · ACL abuse → Domain Admin</sub>
+</td>
+</tr>
+</table>
+
+<br>
 
 Available as one-time packs for solo operators, or monthly subscriptions with updated attack content for teams and consultancies.
 
