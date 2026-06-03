@@ -19,7 +19,7 @@
 
 <br><br>
 
-<img src="assets/live-run.webp" width="860" alt="BULWARK live run — agent timeline, confirmed findings, CVSS scores">
+<img src="assets/demo.gif" width="860" alt="BULWARK — a full autonomous engagement, recon to root">
 
 </div>
 
